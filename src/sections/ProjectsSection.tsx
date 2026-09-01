@@ -139,7 +139,7 @@ export default function ProjectsSection() {
         className="hero-heading mb-12 text-center font-black uppercase leading-none tracking-tight sm:mb-16 md:mb-20"
         style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
       >
-        Courses
+        Taught by me
       </FadeIn>
 
       <div className="mx-auto max-w-6xl">

@@ -1,4 +1,4 @@
-import { Mail, Linkedin, GraduationCap, ArrowUpRight } from 'lucide-react';
+import { Mail, Linkedin, ArrowUpRight } from 'lucide-react';
 import FadeIn from '../components/FadeIn';
 import ContactButton from '../components/ContactButton';
 import { PROFILE } from '../data/content';
@@ -6,21 +6,6 @@ import { PROFILE } from '../data/content';
 const LINKS = [
   { icon: Mail, label: PROFILE.email, href: `mailto:${PROFILE.email}` },
   { icon: Linkedin, label: 'LinkedIn', href: PROFILE.linkedin },
-  {
-    icon: GraduationCap,
-    label: 'Udemy · Power BI Desktop',
-    href: 'https://www.udemy.com/course/power-bi-desktop/',
-  },
-  {
-    icon: GraduationCap,
-    label: 'Udemy · Power Automate Desktop',
-    href: 'https://www.udemy.com/course/power-automate-desktop-class/',
-  },
-  {
-    icon: GraduationCap,
-    label: 'Udemy · 경영정보시각화능력 실기',
-    href: 'https://www.udemy.com/course/power-bi-exam/',
-  },
 ];
 
 export default function ContactSection() {
