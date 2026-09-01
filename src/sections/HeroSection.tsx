@@ -26,23 +26,26 @@ export default function HeroSection() {
         ))}
       </FadeIn>
 
-      <div className="relative z-20 overflow-hidden px-4 md:px-6">
+      <div className="relative z-20 overflow-hidden px-6 md:px-10">
         <FadeIn
           as="h1"
           delay={0.15}
           y={40}
-          className="hero-heading mt-6 w-full whitespace-nowrap text-center text-[8.5vw] font-black uppercase leading-none tracking-tight sm:mt-4 sm:text-[9vw] md:-mt-5 md:text-[9.6vw] lg:text-[10.4vw]"
+          className="hero-heading mt-8 text-left text-[12.5vw] font-black uppercase tracking-tight sm:mt-6 sm:text-[11vw] md:mt-2 md:text-[10vw] lg:text-[7.8vw] xl:text-[8.5vw]"
+          style={{ lineHeight: 0.85 }}
         >
-          Hi, i&apos;m {PROFILE.nameEn}
+          Hi, i&apos;m
+          <br />
+          {PROFILE.nameEn}
         </FadeIn>
       </div>
 
-      <div className="relative z-20 mt-auto flex items-end justify-between px-6 pb-7 sm:pb-8 md:px-10 md:pb-10">
+      <div className="relative z-20 mt-auto flex flex-col items-start gap-5 px-6 pb-7 sm:gap-6 sm:pb-8 md:px-10 md:pb-10">
         <FadeIn
           as="p"
           delay={0.35}
           y={20}
-          className="max-w-[160px] font-light uppercase leading-snug tracking-wide text-[#D7E2EA] sm:max-w-[220px] md:max-w-[260px]"
+          className="max-w-[200px] font-light uppercase leading-snug tracking-wide text-[#D7E2EA] sm:max-w-[280px] md:max-w-[380px]"
           style={{ fontSize: 'clamp(0.75rem, 1.4vw, 1.5rem)' }}
         >
           {PROFILE.tagline}
@@ -56,7 +59,7 @@ export default function HeroSection() {
       <FadeIn
         delay={0.6}
         y={30}
-        className="absolute left-1/2 top-1/2 z-10 w-[280px] -translate-x-1/2 -translate-y-1/2 sm:bottom-0 sm:top-auto sm:w-[360px] sm:translate-y-0 md:w-[440px] lg:w-[520px]"
+        className="absolute bottom-0 right-0 z-10 w-[260px] sm:w-[320px] md:right-[2%] md:w-[380px] lg:right-[4%] lg:w-[420px] xl:w-[480px]"
       >
         <Magnet
           padding={150}
