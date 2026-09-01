@@ -38,7 +38,7 @@ function Tile({
           backgroundSize: '38px 38px',
         }}
       />
-      <span className="relative z-10 p-6 text-xs font-medium uppercase leading-snug tracking-[0.18em] text-white/90 sm:p-7 sm:text-sm md:p-8">
+      <span className="relative z-10 p-4 text-[0.7rem] font-medium uppercase leading-snug tracking-[0.14em] text-white/90 sm:p-7 sm:text-sm sm:tracking-[0.18em] md:p-8">
         {label}
       </span>
     </div>
@@ -64,12 +64,15 @@ function ProjectCard({
   const scale = useTransform(scrollYProgress, [0, 1], [1, targetScale]);
 
   return (
-    <div ref={containerRef} className="sticky top-24 flex h-[85vh] items-start md:top-32">
+    <div
+      ref={containerRef}
+      className="mb-5 sm:sticky sm:top-24 sm:mb-0 sm:flex sm:h-[85vh] sm:items-start md:top-32"
+    >
       <motion.article
         style={{ scale, top: `${index * 28}px` }}
-        className="relative w-full rounded-[40px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-4 sm:rounded-[50px] sm:p-6 md:rounded-[60px] md:p-8"
+        className="relative w-full rounded-[32px] border-2 border-[#D7E2EA] bg-[#0C0C0C] p-4 sm:rounded-[50px] sm:p-6 md:rounded-[60px] md:p-8"
       >
-        <div className="flex flex-wrap items-center justify-between gap-4 px-2 pb-4 sm:px-4 md:pb-6">
+        <div className="flex flex-wrap items-center justify-between gap-4 px-1 pb-4 sm:px-4 md:pb-6">
           <div className="flex items-center gap-4 sm:gap-6 md:gap-8">
             <span
               className="hero-heading font-black leading-none"
@@ -96,19 +99,19 @@ function ProjectCard({
           <LiveProjectButton href={project.href} label="View Course" />
         </div>
 
-        <div className="flex gap-3 sm:gap-4">
-          <div className="flex w-[38%] flex-col gap-3 sm:gap-4">
+        <div className="flex flex-col-reverse gap-3 sm:flex-row sm:gap-4">
+          <div className="flex gap-3 sm:w-[38%] sm:flex-col sm:gap-4">
             <Tile
               label={project.tiles[0]}
               accent={project.accent}
               index={0}
-              className="flex-1 rounded-[40px] sm:rounded-[50px] md:rounded-[60px]"
+              className="h-20 flex-1 rounded-2xl sm:h-auto sm:rounded-[50px] md:rounded-[60px]"
             />
             <Tile
               label={project.tiles[1]}
               accent={project.accent}
               index={1}
-              className="flex-1 rounded-[40px] sm:rounded-[50px] md:rounded-[60px]"
+              className="h-20 flex-1 rounded-2xl sm:h-auto sm:rounded-[50px] md:rounded-[60px]"
             />
           </div>
 
@@ -117,8 +120,7 @@ function ProjectCard({
             alt={`${project.name} 강의 썸네일`}
             loading="lazy"
             draggable={false}
-            className="w-[62%] select-none rounded-[40px] object-cover sm:rounded-[50px] md:rounded-[60px]"
-            style={{ height: 'clamp(190px, 33vw, 400px)' }}
+            className="h-[clamp(150px,42vw,220px)] w-full select-none rounded-[24px] object-cover sm:h-[clamp(190px,33vw,400px)] sm:w-[62%] sm:rounded-[50px] md:rounded-[60px]"
           />
         </div>
       </motion.article>
