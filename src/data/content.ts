@@ -12,7 +12,7 @@ export const PROFILE = {
 
 export const NAV_LINKS = [
   { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
+  { label: 'Capabilities', href: '#capabilities' },
   { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' },
 ];
