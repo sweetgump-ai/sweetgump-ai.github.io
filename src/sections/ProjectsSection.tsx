@@ -93,33 +93,32 @@ function ProjectCard({
             </div>
           </div>
 
-          <LiveProjectButton href={project.href} />
+          <LiveProjectButton href={project.href} label="View Course" />
         </div>
 
         <div className="flex gap-3 sm:gap-4">
-          <div className="flex w-[40%] flex-col gap-3 sm:gap-4">
+          <div className="flex w-[38%] flex-col gap-3 sm:gap-4">
             <Tile
               label={project.tiles[0]}
               accent={project.accent}
               index={0}
-              className="w-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px]"
-              style={{ height: 'clamp(130px, 16vw, 230px)' }}
+              className="flex-1 rounded-[40px] sm:rounded-[50px] md:rounded-[60px]"
             />
             <Tile
               label={project.tiles[1]}
               accent={project.accent}
               index={1}
-              className="w-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px]"
-              style={{ height: 'clamp(160px, 22vw, 340px)' }}
+              className="flex-1 rounded-[40px] sm:rounded-[50px] md:rounded-[60px]"
             />
           </div>
 
-          <Tile
-            label={project.tiles[2]}
-            accent={project.accent}
-            index={2}
-            className="w-[60%] rounded-[40px] sm:rounded-[50px] md:rounded-[60px]"
-            style={{ height: 'clamp(306px, 39.5vw, 586px)' }}
+          <img
+            src={project.image}
+            alt={`${project.name} 강의 썸네일`}
+            loading="lazy"
+            draggable={false}
+            className="w-[62%] select-none rounded-[40px] object-cover sm:rounded-[50px] md:rounded-[60px]"
+            style={{ height: 'clamp(190px, 33vw, 400px)' }}
           />
         </div>
       </motion.article>
@@ -130,7 +129,7 @@ function ProjectCard({
 export default function ProjectsSection() {
   return (
     <section
-      id="projects"
+      id="courses"
       className="relative z-10 -mt-10 rounded-t-[40px] bg-[#0C0C0C] px-5 pb-20 pt-20 sm:-mt-12 sm:rounded-t-[50px] sm:px-8 sm:pt-24 md:-mt-14 md:rounded-t-[60px] md:px-10 md:pt-32"
     >
       <FadeIn
@@ -140,7 +139,7 @@ export default function ProjectsSection() {
         className="hero-heading mb-12 text-center font-black uppercase leading-none tracking-tight sm:mb-16 md:mb-20"
         style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}
       >
-        Project
+        Courses
       </FadeIn>
 
       <div className="mx-auto max-w-6xl">
